@@ -11,6 +11,7 @@
     "factory:deploy": "hardhat deploy-zksync --script factory/deploy.ts",
     "factory:interact": "hardhat deploy-zksync --script factory/interact.ts",
     "factory:create": "hardhat deploy-zksync --script factory/create.ts",
+    "factory:other": "hardhat deploy-zksync --script factory/other.ts",
     "compile": "hardhat compile",
     "clean": "hardhat clean",
     "test": "hardhat test --network hardhat"

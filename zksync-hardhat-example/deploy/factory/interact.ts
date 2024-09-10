@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import { getWallet } from "../utils";
 import { Greeter } from "../../typechain-types";
 
-const INSTANCE_ADDRESS = "0x7bf5e6659ed635def10c40b30958e83ccf78a57f";
+const INSTANCE_ADDRESS = "0xd39b7f52aeae1c97e9f3ca69195ffe22f6ad5249";
 if (!INSTANCE_ADDRESS) throw "⛔️ Provide address of the contract to interact with!";
 
 // An example of a script to interact with the contract
