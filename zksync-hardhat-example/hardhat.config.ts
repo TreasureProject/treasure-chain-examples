@@ -1,4 +1,6 @@
 import { HardhatUserConfig } from "hardhat/config";
+import '@typechain/hardhat'
+import '@nomicfoundation/hardhat-ethers'
 
 import "@matterlabs/hardhat-zksync";
 

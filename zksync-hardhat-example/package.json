@@ -8,6 +8,8 @@
   "scripts": {
     "deploy": "hardhat deploy-zksync --script deploy.ts",
     "interact": "hardhat deploy-zksync --script interact.ts",
+    "factory:deploy": "hardhat deploy-zksync --script factory/deploy.ts",
+    "factory:interact": "hardhat deploy-zksync --script factory/interact.ts",
     "compile": "hardhat compile",
     "clean": "hardhat clean",
     "test": "hardhat test --network hardhat"
@@ -17,6 +19,8 @@
     "@matterlabs/zksync-contracts": "^0.6.1",
     "@nomicfoundation/hardhat-verify": "^2.0.9",
     "@openzeppelin/contracts": "^4.9.6",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
     "@types/chai": "^4.3.16",
     "@types/mocha": "^10.0.7",
     "chai": "^4.5.0",
@@ -25,6 +29,7 @@
     "hardhat": "^2.22.7",
     "mocha": "^10.7.0",
     "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
     "typescript": "^5.5.4",
     "zksync-ethers": "^6.11.0"
   },

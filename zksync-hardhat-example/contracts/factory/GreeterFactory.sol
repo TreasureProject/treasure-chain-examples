@@ -18,7 +18,7 @@ contract GreeterFactory
     }
 
     function createContract(string memory _greeting) public returns (Greeter greeter) {
-        address addr = getGreeterAddres(_greeting, nonce);
+        address addr = getGreeterAddress(_greeting, nonce);
 
         uint codeSize = addr.code.length;
 
@@ -31,10 +31,10 @@ contract GreeterFactory
             abi.encodeCall(Greeter.initialize, (_greeting))
         )));
 
-        nonce ++;
+        nonce++;
     }
 
-    function getGreeterAddres(string memory _greeting, uint256 _nonce) public view returns (address) {
+    function getGreeterAddress(string memory _greeting, uint256 _nonce) public view returns (address) {
         return Create2.computeAddress(bytes32(_nonce), keccak256(abi.encodePacked(
                 type(ERC1967Proxy).creationCode,
                 abi.encode(
