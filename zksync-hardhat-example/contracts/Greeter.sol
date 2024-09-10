@@ -1,10 +1,20 @@
 //SPDX-License-Identifier: Unlicense
 pragma solidity ^0.8.0;
 
-contract Greeter {
+import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
+
+contract Greeter is Initializable
+{
     string private greeting;
 
-    constructor(string memory _greeting) {
+    constructor() {
+        _disableInitializers();
+    }
+
+    function initialize(string memory _greeting)
+        public virtual
+        initializer
+    {
         greeting = _greeting;
     }
 
