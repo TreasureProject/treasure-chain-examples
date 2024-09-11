@@ -3,18 +3,14 @@ pragma solidity ^0.8.0;
 
 import "@openzeppelin/contracts/proxy/utils/Initializable.sol";
 
-contract Greeter is Initializable
-{
+contract Greeter is Initializable {
     string private greeting;
 
     constructor() {
         _disableInitializers();
     }
 
-    function initialize(string memory _greeting)
-        public virtual
-        initializer
-    {
+    function initialize(string memory _greeting) public virtual initializer {
         greeting = _greeting;
     }
 
