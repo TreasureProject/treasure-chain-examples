@@ -8,7 +8,7 @@ if (!INSTANCE_ADDRESS) throw "⛔️ Provide address of the contract to interact
 
 // An example of a script to interact with the contract
 export default async function () {
-  console.log(`Running script to interact with contract ${INSTANCE_ADDRESS}`);
+  console.log(`Running script to interact with Greeter contract ${INSTANCE_ADDRESS}`);
     const greeterArtifact = await hre.artifacts.readArtifact("Greeter");
 
     // Initialize contract instance for interaction
@@ -23,7 +23,7 @@ export default async function () {
   console.log(`Current message is: ${greetResponse}`);
 
   // Run contract write function
-  const setGreetingTx = await instanceContract.setGreeting("Hello people!");
+  const setGreetingTx = await instanceContract.setGreeting("Hello again, people!");
   console.log(`Transaction hash of setting new message: ${setGreetingTx.hash}`);
 
   // Wait until transaction is processed
