@@ -1,0 +1,40 @@
+{
+  "name": "zksync-hardhat-template",
+  "description": "A template for ZKsync smart contracts development with Hardhat",
+  "private": true,
+  "author": "Matter Labs",
+  "license": "MIT",
+  "repository": "https://github.com/matter-labs/zksync-hardhat-template.git",
+  "scripts": {
+    "erc20:deploy": "hardhat deploy-zksync --script erc20/deploy.ts",
+    "nft:deploy": "hardhat deploy-zksync --script nft/deploy.ts",
+    "factory:deploy": "hardhat deploy-zksync --script factory/deploy.ts",
+    "factory:interact": "hardhat deploy-zksync --script factory/interact.ts",
+    "factory:create": "hardhat deploy-zksync --script factory/create.ts",
+    "compile": "hardhat compile",
+    "clean": "hardhat clean",
+    "test": "hardhat test --network hardhat"
+  },
+  "devDependencies": {
+    "@matterlabs/hardhat-zksync": "^1.1.0",
+    "@matterlabs/zksync-contracts": "^0.6.1",
+    "@nomicfoundation/hardhat-verify": "^2.0.9",
+    "@openzeppelin/contracts": "^4.9.6",
+    "@typechain/ethers-v6": "^0.5.1",
+    "@typechain/hardhat": "^9.1.0",
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.7",
+    "chai": "^4.5.0",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.13.2",
+    "hardhat": "^2.22.7",
+    "mocha": "^10.7.0",
+    "ts-node": "^10.9.2",
+    "typechain": "^8.3.2",
+    "typescript": "^5.5.4",
+    "zksync-ethers": "^6.11.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts-upgradeable": "^5.0.2"
+  }
+}
