@@ -36,6 +36,7 @@ const config: HardhatUserConfig = {
   zksolc: {
     version: "latest",
     settings: {
+      enableEraVMExtensions: true,
       // find all available options in the official documentation
       // https://docs.zksync.io/build/tooling/hardhat/hardhat-zksync-solc#configuration
     },

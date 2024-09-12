@@ -20,10 +20,13 @@ export default async function () {
     getWallet() // Interact with the contract on behalf of this wallet
   ) as unknown as GreeterFactory;
 
+  const currentNonce = await factoryContract.nonce();
   // Create new greeter instance
   const createTx = await factoryContract.createContract("Hello instance!");
   const instanceAddress = (await createTx.wait())?.contractAddress;
+
   console.log(`Created new instance at address: ${instanceAddress}`);
+  console.log(`Verify create2 address: ${await factoryContract.create2ContractAddress(currentNonce, "Hello instance!")}`);
 
   const greeterArtifact = await hre.artifacts.readArtifact("Greeter");
 
