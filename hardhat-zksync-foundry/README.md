@@ -1,20 +1,41 @@
-# ZKsync Hardhat project template
+# Foundry tests in hardhat-zksync project
 
 This project was scaffolded with [zksync-cli](https://github.com/matter-labs/zksync-cli).
+It contains some basic examples on how to deploy an ERC20, and the Greeter contract. The same unit tests are implemented in both foundry and hardhat.
+
+## Prerequisites
+
+Install foundry-zksync according to the  [docs](https://docs.zksync.io/build/tooling/foundry/getting-started)
+> Note: doing the above will overwrite the standard foundry tools. To revert back, run `foundryup` which will install the latest non-zksync version.
 
 ## Project Layout
 
-- `/contracts`: Contains solidity smart contracts.
-- `/deploy`: Scripts for contract deployment and interaction.
-- `/test`: Test files.
-- `hardhat.config.ts`: Configuration settings.
+- `/contracts`: contains solidity smart contracts
+- `/deploy`: scripts for contract deployment and interaction
+- `/test`: hardhat test files
+- `/foundry-test`: foundry test files
+- `hardhat.config.ts`: configuration settings
+
+## Getting started
+
+Install node dependencies
+```bash
+npm install
+```
+
+Install foundry dependencies
+```bash
+forge install
+```
+> This example is configured to work with both git submodules and submodules with foundry for dependencies, but you can also use [soldeer](https://book.getfoundry.sh/projects/soldeer), which is a solidity native package manager.
 
 ## How to Use
 
-- `npm run compile`: Compiles contracts.
-- `npm run deploy`: Deploys using script `/deploy/deploy.ts`.
-- `npm run interact`: Interacts with the deployed contract using `/deploy/interact.ts`.
-- `npm run test`: Tests the contracts.
+- `npm run compile`: compiles contracts
+- `npm run erc20:deploy`: deploys the erc20 contract
+- `npm run greeter:deploy`: deploys the greeter contract
+- `npm run test:hardhat`: runs the hardhat tests
+- `npm run test:forge`: runs the foundry tests
 
 Note: Both `npm run deploy` and `npm run interact` are set in the `package.json`. You can also run your files directly, for example: `npx hardhat deploy-zksync --script deploy.ts`
 
@@ -22,7 +43,7 @@ Note: Both `npm run deploy` and `npm run interact` are set in the `package.json`
 
 To keep private keys safe, this project pulls in environment variables from `.env` files. Primarily, it fetches the wallet's private key.
 
-Rename `.env.example` to `.env` and fill in your private key:
+Copy `.env.example` to `.env` and fill in your private key:
 
 ```
 WALLET_PRIVATE_KEY=your_private_key_here...
@@ -41,10 +62,10 @@ Important: ZKsync In-memory Node currently supports only the L2 node. If contrac
 ## Useful Links
 
 - [Docs](https://docs.zksync.io/build)
-- [Official Site](https://zksync.io/)
-- [GitHub](https://github.com/matter-labs)
+- [Official Site](https://treasure.lol/)
+- [GitHub](https://github.com/TreasureProject)
 - [Twitter](https://twitter.com/zksync)
-- [Discord](https://join.zksync.dev/)
+- [Discord](https://discord.com/invite/treasuredao)
 
 ## License
 

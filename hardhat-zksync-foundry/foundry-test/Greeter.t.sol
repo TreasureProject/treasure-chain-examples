@@ -10,4 +10,13 @@ contract GreeterTest is Test {
     function setUp() public {
         greeter = new Greeter("Hello, world!");
     }
+
+    function testGreet() public {
+        assertEq(greeter.greet(), "Hello, world!");
+    }
+
+    function testSetGreeting() public {
+        greeter.setGreeting("Hola, mundo!");
+        assertEq(greeter.greet(), "Hola, mundo!");
+    }
 }

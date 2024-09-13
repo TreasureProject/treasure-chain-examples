@@ -11,9 +11,13 @@ lerna-debug.log*
 artifacts
 cache
 
+# foundry artifacts
+cache_forge
+
 # zksync artifacts
 artifacts-zk
 cache-zk
+zkout
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
